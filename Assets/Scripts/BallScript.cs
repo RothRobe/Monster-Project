@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class BallScript : MonoBehaviour
 {
+    public TextMeshProUGUI scoreText;
     private readonly Vector2 _velocityVector = new Vector2(1, 0);
+    private int _score;
     // Start is called before the first frame update
     void Start()
     {
-        
+        _score = 0;
     }
 
     // Update is called once per frame
@@ -31,6 +34,11 @@ public class BallScript : MonoBehaviour
             // Add upward force when hitting the paddle
             Vector3 bounce = new Vector3(0, bounceForce, 0);
             rb.AddForce(bounce, ForceMode2D.Impulse);
+
+            if (scoreText != null)
+            {
+                scoreText.text = "Score: " + ++_score;
+            }
         }
     }
 }
