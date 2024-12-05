@@ -8,6 +8,8 @@ public class BallScript : MonoBehaviour
     public TextMeshProUGUI scoreText;
     private readonly Vector2 _velocityVector = new Vector2(1, 0);
     private int _score;
+
+    public GameController gameController;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +41,13 @@ public class BallScript : MonoBehaviour
             {
                 scoreText.text = "Score: " + ++_score;
             }
+
+            return;
+        }
+
+        if (collision.gameObject.CompareTag("Floor"))
+        {
+            gameController.GameOver();
         }
     }
 }

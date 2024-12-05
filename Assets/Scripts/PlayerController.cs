@@ -1,10 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    
     public float speed = 10f;
     // Start is called before the first frame update
     void Start()
@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
         transform.Translate(Vector3.right * move * speed * Time.deltaTime);
         
         // Clamp paddle position within screen bounds
-        float clampedX = Mathf.Clamp(transform.position.x, -10f, 10f);
+        float clampedX = Mathf.Clamp(transform.position.x, -8.4f, 8.4f);
         transform.position = new Vector3(clampedX, transform.position.y, transform.position.z);
     }
 }

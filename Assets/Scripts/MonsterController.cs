@@ -9,8 +9,8 @@ public class MonsterController : MonoBehaviour
     private bool _ballSet;
     
     
-    private Vector2 minPoint = new Vector2(-9.5f, 2f);  // Bottom-left corner of the movement area
-    private Vector2 maxPoint = new Vector2(9.5f, 4.5f);  // Top-right corner of the movement area
+    private Vector2 minPoint = new Vector2(-8f, 2f);  // Bottom-left corner of the movement area
+    private Vector2 maxPoint = new Vector2(8f, 4.5f);  // Top-right corner of the movement area
 
     public float moveSpeed = 2f;
     private Vector2 targetPosition;
