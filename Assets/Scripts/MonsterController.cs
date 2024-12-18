@@ -5,6 +5,7 @@ using UnityEngine;
 public class MonsterController : MonoBehaviour
 {
     public GameObject ball;
+    public SpriteRenderer monsterSprite;
     public float pullForce = 10f;
     private bool _ballSet;
     
@@ -37,6 +38,18 @@ public class MonsterController : MonoBehaviour
     void MoveTowardsTarget()
     {
         transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+        
+        float direction = targetPosition.x - transform.position.x;
+
+        // Flip the sprite based on the direction
+        if (direction > 0) // Moving right
+        {
+            monsterSprite.flipX = true;
+        }
+        else if (direction < 0) // Moving left
+        {
+            monsterSprite.flipX = false;
+        }
 
         // Check if the monster has reached the target position
         if ((Vector2)transform.position == targetPosition)
