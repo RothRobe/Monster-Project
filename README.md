@@ -35,12 +35,18 @@ This game was developed as part of a university project for a Japanese literatur
 2. Unzip the archive and start the ` .exe ` file.
 
 ---
+## Gallery
+
+<img src="https://github.com/user-attachments/assets/d38d4c63-c8a4-4433-8453-a2ddf90b4b04" width="30%"></img> <img src="https://github.com/user-attachments/assets/4ad39468-98a4-46c5-aa0d-e3c597283bf1" width="30%"></img> <img src="https://github.com/user-attachments/assets/71ad02e3-616d-4d15-bad2-0702d6c418e4" width="30%"></img> 
+
+This is the art used in this project. A demo video is also available!
+
+---
 
 ## Development
 This game was developed using **Unity** with C# scripting. The art and design were completely AI generated due to the developer's lack of artistic abilities.
 
 ---
-
 
 ## Credits
 - **Developer**: Robert Roth (24ISP281)
